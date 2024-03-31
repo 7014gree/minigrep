@@ -6,6 +6,6 @@ fn main() {
     let query = &args[1];
     let filepath = &args[2];
 
-    println!("Searching for {}", args);
-    println!("In file {}", file_path)
+    println!("Searching for {}", query);
+    println!("In file {}", file_path);
 }
