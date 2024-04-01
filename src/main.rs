@@ -6,7 +6,7 @@ fn main() {
     
     let config = parse_config(&args);
 
-    println!("Searching for {}", config[0]);
+    println!("Searching for {}", config.query);
     println!("In file {}", config.file_path);
 
     let contents = fs::read_to_string(config.file_path)
