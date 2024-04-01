@@ -19,7 +19,19 @@ impl Config {
 
         let mut ignore_case = env::var("IGNORE_CASE").is_ok();
 
-        if !ignore_case && args.len() >= 4 {
+
+        //  env takes precedence
+        // if !ignore_case && args.len() >= 4 {
+        //     ignore_case = match args[3].as_str() {
+        //         "true" => true,
+        //         "t" => true,
+        //         "1" => true,
+        //         _ => false,
+        //     }
+        // }
+
+        //  command line argument takes precedence
+        if args.len() >= 4 {
             ignore_case = match args[3].as_str() {
                 "true" => true,
                 "t" => true,
